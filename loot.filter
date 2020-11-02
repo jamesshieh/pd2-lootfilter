@@ -7,42 +7,60 @@ ItemDisplay[opm]:
 ItemDisplay[gpl]:
 ItemDisplay[opl]:
 // Inferior items
-ItemDisplay[INF]:
-
-// Display
-// Add ethereality, sockets, ilvl to the name
-ItemDisplay[ETH]: ETH %NAME%%CONTINUE%
-ItemDisplay[SOCK>0]: %NAME% (%SOCKETS%)%CONTINUE%
-ItemDisplay[]: %NAME% L%ILVL%%CONTINUE%
-
-
-// Name Shorten
-ItemDisplay[tsc]: %GREEN%**%WHITE%TP
-ItemDisplay[isc]: %GREEN%**%WHITE%ID
-ItemDisplay[vps]: Stam
-ItemDisplay[yps]: Anti
-ItemDisplay[wms]: Thaw
-ItemDisplay[hp1]: %RED%**%WHITE%Min Heal
-ItemDisplay[hp2]: %RED%**%WHITE%Lt Heal
-ItemDisplay[hp3]: %RED%**%WHITE%Heal
-ItemDisplay[hp4]: %RED%**%WHITE%Gt Heal
-ItemDisplay[hp5]: %RED%**%WHITE%Sup Heal
-ItemDisplay[mp1]: %BLUE%**%WHITE%Min Mana
-ItemDisplay[mp2]: %BLUE%**%WHITE%Lt Mana
-ItemDisplay[mp3]: %BLUE%**%WHITE%Mana
-ItemDisplay[mp4]: %BLUE%**%WHITE%Gt Mana
-ItemDisplay[mp5]: %BLUE%**%WHITE%Sup Mana
-ItemDisplay[rvs]: %PURPLE%**%WHITE%Rejuv
-ItemDisplay[rvl]: %PURPLE%**%WHITE%Full
-ItemDisplay[key]: Key
-
+ItemDisplay[INF CLVL>19]: // Hide inferior items after 19
+// Other
+ItemDisplay[NMAG SOCK=1 CLVL>60]: // Hide single socket normal items after 60
+ItemDisplay[NMAG NORM CLVL>60]: // Hide normal items after 60
+ItemDisplay[NMAG WEAPON EXC CLVL>80]: // Hide execptional items after 80
+ItemDisplay[NMAG aqv CLVL>39]: Arrows
+ItemDisplay[NMAG cqv CLVL>39]: Bolts
 // Pots
+ItemDisplay[vps CLVL>29]: // Hide stam pots after level 29
 ItemDisplay[hp1 CLVL>24]: // Hides Minor Healing Potions after level 24
 ItemDisplay[hp2 CLVL>24]: // Hides Light Healing Potions after level 24
 ItemDisplay[hp3 CLVL>39]: // Hides Healing Potions after level 39
 ItemDisplay[mp1 CLVL>24]: // Hides Minor Healing Potions after level 24
 ItemDisplay[mp2 CLVL>24]: // Hides Light Healing Potions after level 24
 ItemDisplay[mp3 CLVL>39]: // Hides Healing Potions after level 39
+
+// Display
+// Add ethereality, sockets, ilvl to the name
+ItemDisplay[ETH]: ETH %NAME%%CONTINUE%
+ItemDisplay[SOCK>0]: %NAME% (%SOCKETS%)%CONTINUE%
+
+// ilvl items
+// Charms
+ItemDisplay[cm1]: %NAME% (L%ILVL%)
+ItemDisplay[cm2]: %NAME% (L%ILVL%)
+ItemDisplay[cm3]: %NAME% (L%ILVL%)
+// Rings and amus
+ItemDisplay[rin]: %NAME% (L%ILVL%)%CONTINUE%
+ItemDisplay[amu]: %NAME% (L%ILVL%)%CONTINUE%
+
+
+// Name Shorten
+ItemDisplay[tsc]: %GREEN%*%WHITE%TP
+ItemDisplay[isc]: %GREEN%*%WHITE%ID
+ItemDisplay[vps]: Stam
+ItemDisplay[yps]: Anti
+ItemDisplay[wms]: Thaw
+ItemDisplay[hp1]: %RED%*%WHITE%Min Heal
+ItemDisplay[hp2]: %RED%*%WHITE%Lt Heal
+ItemDisplay[hp3]: %RED%*%WHITE%Heal
+ItemDisplay[hp4]: %RED%*%WHITE%Gt Heal
+ItemDisplay[hp5]: %RED%*%WHITE%Sup Heal
+ItemDisplay[mp1]: %BLUE%*%WHITE%Min Mana
+ItemDisplay[mp2]: %BLUE%*%WHITE%Lt Mana
+ItemDisplay[mp3]: %BLUE%*%WHITE%Mana
+ItemDisplay[mp4]: %BLUE%*%WHITE%Gt Mana
+ItemDisplay[mp5]: %BLUE%*%WHITE%Sup Mana
+ItemDisplay[rvs]: %PURPLE%*%WHITE%Juv
+ItemDisplay[rvl]: %PURPLE%*%WHITE%Full
+ItemDisplay[key]: Key
+ItemDisplay[tes]: Andy*Duriel Essence
+ItemDisplay[ceh]: Mephisto Essence
+ItemDisplay[bet]: Diablo Essence
+ItemDisplay[fed]: Baal Essence
 
 // Runes and gems
 ItemDisplay[RUNE<20]: %RUNENUM% - %RUNENAME%
@@ -63,3 +81,7 @@ ItemDisplay[GEM=5 GEMTYPE=6]: %NAME%%DOT-20% // Perfect Topaz
 ItemDisplay[GOLD<500 CLVL>20]:
 ItemDisplay[GOLD<1000 CLVL>60]:
 ItemDisplay[GOLD<5000 CLVL>80]:
+
+// Bases
+ItemDisplay[WP8 ETH ELT NMAG (SOCK=0 OR SOCK>3) !7o7]: %PURPLE%%NAME%
+
