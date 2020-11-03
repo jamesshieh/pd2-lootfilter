@@ -3,8 +3,12 @@ ItemDisplay[GOLD<100 CLVL<20]:
 ItemDisplay[GOLD<1000 (CLVL>19 AND CLVL<80)]:
 ItemDisplay[GOLD<5000 CLVL>79]:
 
+// Specials
 // Wirt Leg
 ItemDisplay[leg]: %NAME%
+// PD2 items
+ItemDisplay[wss or lbox or imra or imma or scou or rera or upma]: %NAME%
+ItemDisplay[t11 or t12 or t13 or t14 or t15 or t16 or t17 or t18]: %NAME%
 
 // Ignore for sure
 // Inferior items
