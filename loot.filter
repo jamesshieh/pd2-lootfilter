@@ -20,10 +20,9 @@ ItemDisplay[MAG (WEAPON or ARMOR) EXC CLVL>69]: // Hide execptional magical item
 ItemDisplay[NMAG aqv CLVL>39]: Arrows // Normal arrows and bolts
 ItemDisplay[NMAG cqv CLVL>39]: Bolts
 
-
 //Health & Mana Potions
-ItemDisplay[rvl]: %PURPLE%Full
-ItemDisplay[rvs]: %PURPLE%Juv
+ItemDisplay[rvl]: %PURPLE%!%WHITE%Full
+ItemDisplay[rvs]: %PURPLE%!%WHITE%Juv
 ItemDisplay[hp4]: %RED%!%WHITE%great hp
 ItemDisplay[hp5]: %RED%!%WHITE%sup hp
 ItemDisplay[mp4]: %BLUE%!%WHITE%great mp
@@ -48,23 +47,22 @@ ItemDisplay[pk2]: %NAME% %GRAY%[Summoner]
 ItemDisplay[pk3]: %NAME% %GRAY%[Nihlathak]
 
 //Utilites
-ItemDisplay[tsc]: %BLUE%°%GRAY%tp
-ItemDisplay[isc]: %RED%°%GRAY%id
+ItemDisplay[tsc]: %BLUE%!%GRAY%tp
+ItemDisplay[isc]: %RED%!%GRAY%id
 ItemDisplay[vps CLVL<41]: %GREEN%!%WHITE%stamina
 ItemDisplay[vps CLVL>40]:
 ItemDisplay[wms CLVL<61]: %GREEN%!%WHITE%thaw
 ItemDisplay[wms CLVL>60]:
 ItemDisplay[yps]: %GREEN%!%WHITE%a
-ItemDisplay[key]: %NAME%key
+ItemDisplay[key]: %NAME%
 //Choking, Exploding, Fulminating, Oil, Rancid, Strangling
-ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) CLVL>23]:
+ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) CLVL>10]:
 
 // Display
 //Show me number of sockets on ETH AND ID items
 ItemDisplay[(ARMOR OR WEAPON) ((MAG OR RARE OR SET OR UNI) AND ETH) SOCK>0]: %NAME% %GRAY%ETH %TAN%[%SOCKETS%]
 //Show me number of sockets on ID items
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) SOCK>0]: %NAME% %TAN%[%SOCKETS%]
-
 
 
 // ilvl items
@@ -98,15 +96,6 @@ ItemDisplay[gpr]: %ORANGE%P %WHITE%Ruby %ORANGE%[%RED%O%ORANGE%]
 ItemDisplay[gpb]: %ORANGE%P %WHITE%Sapphire %ORANGE%[%BLUE%O%ORANGE%]
 ItemDisplay[gpy]: %ORANGE%P %WHITE%Topaz %ORANGE%[%YELLOW%O%ORANGE%]
 ItemDisplay[skz]: %ORANGE%P %WHITE%Skull %ORANGE%[%GRAY%O%ORANGE%]
-
-// Items
-// SHOW ME THAT UNIQ ITEM IS ETH
-ItemDisplay[UNI AND ETH AND SOCK=0]: %GRAY%ETH %GOLD%%NAME%
-//Show me every  uniq and set item and runewords
-ItemDisplay[RW]: %NAME% %TAN%[%SOCKETS%]
-ItemDisplay[(UNI OR SET)]: %NAME%
-//Show me every identified item
-ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME%
 
 //RuneWord Bases
 //Spirit Swords
@@ -188,6 +177,19 @@ ItemDisplay[ush (!INF AND !ETH) AND (NMAG OR RW)  SOCK>1]: %NAME% %TAN%[%SOCKETS
 ItemDisplay[uit (!INF AND ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4)]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %TAN%[%SOCKETS%]
 ItemDisplay[uit (!INF AND !ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4)]: %GRAY%%NAME% %TAN%[%SOCKETS%]
 
+// Items
+// SHOW ME THAT UNIQ ITEM IS ETH
+ItemDisplay[UNI AND ETH AND SOCK=0]: %GRAY%ETH %GOLD%%NAME%
+//Show me every  uniq and set item and runewords
+ItemDisplay[RW]: %NAME% %TAN%[%SOCKETS%]
+ItemDisplay[(UNI OR SET)]: %NAME%
+//Show me every identified item
+ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME%
+
 // Ignore fallback
 ItemDisplay[NMAG (WEAPON OR ARMOR) NORM CLVL>59]: // Hide normal items after 60
 ItemDisplay[NMAG (WEAPON or ARMOR) EXC CLVL>59]: // Hide execptional base items after 60
+// Show sockets for all remaining
+ItemDisplay[NMAG ETH SOCK>0]: %GRAY%ETH %NAME% %TAN%[%SOCKETS%]
+ItemDisplay[NMAG ETH SOCK=0]: %GRAY%ETH %NAME%
+ItemDisplay[NMAG SOCK>0]: %NAME% %TAN%[%SOCKETS%]
