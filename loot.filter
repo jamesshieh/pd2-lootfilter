@@ -60,7 +60,7 @@ ItemDisplay[(gpm OR opm OR opl OR ops OR gps OR gpl) CLVL>10]:
 
 // Display
 //Show me number of sockets on ETH AND ID items
-ItemDisplay[(ARMOR OR WEAPON) ((MAG OR RARE OR SET OR UNI) AND ETH) SOCK>0]: %NAME% %GRAY%ETH %TAN%[%SOCKETS%]
+ItemDisplay[(ARMOR OR WEAPON) ((MAG OR RARE OR SET OR UNI) AND ETH) SOCK>0]: %NAME% %GRAY%[%WHITE%eth%GRAY%] %TAN%[%SOCKETS%]
 //Show me number of sockets on ID items
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) SOCK>0]: %NAME% %TAN%[%SOCKETS%]
 
@@ -75,31 +75,32 @@ ItemDisplay[rin]: %NAME% (L%ILVL%)%CONTINUE%
 ItemDisplay[amu]: %NAME% (L%ILVL%)%CONTINUE%
 
 // Runes and gems
-ItemDisplay[RUNE<20]: %RUNENUM% - %RUNENAME%
-ItemDisplay[RUNE>19]: %RUNENUM% - %RUNENAME%%MAP%
+ItemDisplay[RUNE>0 QTY>1]: %TAN%(%RUNENUM%) %WHITE%%RUNENAME% x%QTY%
+ItemDisplay[RUNE<20]: %TAN%(%RUNENUM%) %WHITE%%RUNENAME%
+ItemDisplay[RUNE>19]: %TAN%(%RUNENUM%) %WHITE%%RUNENAME%%MAP%
 ItemDisplay[GEM>0 QTY>1]: %NAME% x%QTY%%CONTINUE% // Shows the quantity of runes for stacking purposes
 ItemDisplay[(gfv OR gfw OR gfg OR gfr OR gfb OR gfy OR skf) DIFFICULTY>0]:
 ItemDisplay[(gsv OR gsw OR gsg OR gsr OR gsb OR gsy OR sku) DIFFICULTY>1]:
 ItemDisplay[(gcv OR gcw OR gcg OR gcr OR gcb OR gcy OR skc) CLVL<19]: %NAME%
 ItemDisplay[(gcv OR gcw OR gcg OR gcr OR gcb OR gcy OR skc)]: %GRAY%chip
-ItemDisplay[gzv]: %WHITE%Amethyst %ORANGE%[%PURPLE%O%ORANGE%]
-ItemDisplay[glw]: %WHITE%Diamond %ORANGE%[%WHITE%O%ORANGE%]
-ItemDisplay[glg]: %WHITE%Emerald %ORANGE%[%GREEN%O%ORANGE%]
-ItemDisplay[glr]: %WHITE%Ruby %ORANGE%[%RED%O%ORANGE%]
-ItemDisplay[glb]: %WHITE%Sapphire %ORANGE%[%BLUE%O%ORANGE%]
-ItemDisplay[gly]: %WHITE%Topaz %ORANGE%[%YELLOW%O%ORANGE%]
-ItemDisplay[skl]: %WHITE%Skull %ORANGE%[%GRAY%O%ORANGE%]
-ItemDisplay[gpv]: %ORANGE%P %WHITE%Amethyst %ORANGE%[%PURPLE%O%ORANGE%]
-ItemDisplay[gpw]: %ORANGE%P %WHITE%Diamond %ORANGE%[%WHITE%O%ORANGE%]
-ItemDisplay[gpg]: %ORANGE%P %WHITE%Emerald %ORANGE%[%GREEN%O%ORANGE%]
-ItemDisplay[gpr]: %ORANGE%P %WHITE%Ruby %ORANGE%[%RED%O%ORANGE%]
-ItemDisplay[gpb]: %ORANGE%P %WHITE%Sapphire %ORANGE%[%BLUE%O%ORANGE%]
-ItemDisplay[gpy]: %ORANGE%P %WHITE%Topaz %ORANGE%[%YELLOW%O%ORANGE%]
-ItemDisplay[skz]: %ORANGE%P %WHITE%Skull %ORANGE%[%GRAY%O%ORANGE%]
+ItemDisplay[gzv]: %WHITE%F %ORANGE%[%PURPLE%O%ORANGE%]
+ItemDisplay[glw]: %WHITE%F %ORANGE%[%WHITE%O%ORANGE%]
+ItemDisplay[glg]: %WHITE%F %ORANGE%[%GREEN%O%ORANGE%]
+ItemDisplay[glr]: %WHITE%F %ORANGE%[%RED%O%ORANGE%]
+ItemDisplay[glb]: %WHITE%F %ORANGE%[%BLUE%O%ORANGE%]
+ItemDisplay[gly]: %WHITE%F %ORANGE%[%YELLOW%O%ORANGE%]
+ItemDisplay[skl]: %WHITE%F %ORANGE%[%GRAY%O%ORANGE%]
+ItemDisplay[gpv]: %ORANGE%P %ORANGE%[%PURPLE%O%ORANGE%]
+ItemDisplay[gpw]: %ORANGE%P %ORANGE%[%WHITE%O%ORANGE%]
+ItemDisplay[gpg]: %ORANGE%P %ORANGE%[%GREEN%O%ORANGE%]
+ItemDisplay[gpr]: %ORANGE%P %ORANGE%[%RED%O%ORANGE%]
+ItemDisplay[gpb]: %ORANGE%P %ORANGE%[%BLUE%O%ORANGE%]
+ItemDisplay[gpy]: %ORANGE%P %ORANGE%[%YELLOW%O%ORANGE%]
+ItemDisplay[skz]: %ORANGE%P %ORANGE%[%GRAY%O%ORANGE%]
 
 //RuneWord Bases
 //Spirit Swords
-ItemDisplay[(crs OR bsd OR lsd) (ETH AND (NMAG OR RW)) SOCK=4]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %TAN%[%SOCKETS%]
+ItemDisplay[(crs OR bsd OR lsd) (ETH AND (NMAG OR RW)) SOCK=4]: %GRAY%[%WHITE%eth%GRAY%]%GRAY%] %NAME% %TAN%[%SOCKETS%]
 ItemDisplay[(crs OR bsd OR lsd) (NMAG OR RW) SOCK=4]: %NAME% %TAN%[%SOCKETS%]
 //Holy Thunder/Rift
 ItemDisplay[wsp !ETH AND (NMAG OR RW) SOCK=4]: %NAME% %TAN%[%SOCKETS%]
@@ -179,7 +180,7 @@ ItemDisplay[uit (!INF AND !ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4)]: %GRAY%%NA
 
 // Items
 // SHOW ME THAT UNIQ ITEM IS ETH
-ItemDisplay[UNI AND ETH AND SOCK=0]: %GRAY%ETH %GOLD%%NAME%
+ItemDisplay[UNI AND ETH AND SOCK=0]: %GRAY%[%WHITE%eth%GRAY%] %GOLD%%NAME%
 //Show me every  uniq and set item and runewords
 ItemDisplay[RW]: %NAME% %TAN%[%SOCKETS%]
 ItemDisplay[(UNI OR SET)]: %NAME%
@@ -190,6 +191,6 @@ ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME%
 ItemDisplay[NMAG (WEAPON OR ARMOR) NORM CLVL>59]: // Hide normal items after 60
 ItemDisplay[NMAG (WEAPON or ARMOR) EXC CLVL>59]: // Hide execptional base items after 60
 // Show sockets for all remaining
-ItemDisplay[NMAG ETH SOCK>0]: %GRAY%ETH %NAME% %TAN%[%SOCKETS%]
-ItemDisplay[NMAG ETH SOCK=0]: %GRAY%ETH %NAME%
+ItemDisplay[NMAG ETH SOCK>0]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %TAN%[%SOCKETS%]
+ItemDisplay[NMAG ETH SOCK=0]: %GRAY%[%WHITE%eth%GRAY%] %NAME%
 ItemDisplay[NMAG SOCK>0]: %NAME% %TAN%[%SOCKETS%]
