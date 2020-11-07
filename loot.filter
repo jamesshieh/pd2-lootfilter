@@ -183,6 +183,7 @@ ItemDisplay[uit (!INF AND !ETH) AND (NMAG OR RW)  (SOCK=0 OR SOCK=4)]: %GRAY%%NA
 ItemDisplay[UNI AND ETH AND SOCK=0]: %GRAY%[%WHITE%eth%GRAY%] %GOLD%%NAME%
 //Show me every  uniq and set item and runewords
 ItemDisplay[RW]: %NAME% %TAN%[%SOCKETS%]
+ItemDisplay[(UNI OR SET)(rin or amu)]: %NAME%%MAP%
 ItemDisplay[(UNI OR SET)]: %NAME%
 //Show me every identified item
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME%
