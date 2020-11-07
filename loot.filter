@@ -12,13 +12,13 @@ ItemDisplay[t11 or t12 or t13 or t14 or t15 or t16 or t17 or t18]: %NAME%
 
 // Ignore for sure
 // Inferior items
-ItemDisplay[INF CLVL>19]: // Hide inferior items after 19
+ItemDisplay[INF CLVL>9]: // Hide inferior items after 19
 // Items
-ItemDisplay[NMAG SOCK=1 CLVL>60]: // Hide single socket normal items after 60
-ItemDisplay[MAG (WEAPON OR ARMOR) NORM CLVL>69]: // Hide normal magical items after 70
-ItemDisplay[MAG (WEAPON or ARMOR) EXC CLVL>69]: // Hide execptional magical items after 70
-ItemDisplay[NMAG aqv CLVL>39]: Arrows // Normal arrows and bolts
-ItemDisplay[NMAG cqv CLVL>39]: Bolts
+ItemDisplay[NMAG SOCK=1 CLVL>19]: // Hide single socket normal items after 20
+ItemDisplay[MAG (WEAPON OR ARMOR) NORM CLVL>29]: // Hide normal magical items after 30
+ItemDisplay[MAG (WEAPON or ARMOR) EXC CLVL>49]: // Hide execptional magical items after 50
+ItemDisplay[aqv CLVL>19]: // Normal arrows and bolts
+ItemDisplay[cqv CLVL>19]:
 
 //Health & Mana Potions
 ItemDisplay[rvl]: %PURPLE%!%WHITE%Full
@@ -189,7 +189,7 @@ ItemDisplay[(UNI OR SET)]: %NAME%
 ItemDisplay[(ARMOR OR WEAPON) (MAG OR RARE OR SET OR UNI) ID]: %NAME%
 
 // Ignore fallback
-ItemDisplay[NMAG (WEAPON OR ARMOR) NORM CLVL>59]: // Hide normal items after 60
+ItemDisplay[NMAG (WEAPON OR ARMOR) NORM CLVL>39]: // Hide normal items after 60
 ItemDisplay[NMAG (WEAPON or ARMOR) EXC CLVL>59]: // Hide execptional base items after 60
 // Show sockets for all remaining
 ItemDisplay[NMAG ETH SOCK>0]: %GRAY%[%WHITE%eth%GRAY%] %NAME% %TAN%[%SOCKETS%]
